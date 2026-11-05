@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aureus Voyages — Luxury Travel & Tour Agency</title>
+  <meta name="description" content="Aureus Voyages — bespoke luxury travel experiences, curated tours, and world-class destinations." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✈️</text></svg>" />
+</head>
+<body>
+
+  <!-- ===== Preloader ===== -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-inner">
+      <div class="preloader-logo">AUREUS<span>VOYAGES</span></div>
+      <div class="preloader-bar"><span></span></div>
+    </div>
+  </div>
+
+  <!-- ===== Top Bar ===== -->
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <div class="topbar-left">
+        <span>📞 +1 (800) 555-0199</span>
+        <span>✉️ hello@aureusvoyages.com</span>
+      </div>
+      <div class="topbar-right">
+        <a href="#">USD ▾</a>
+        <a href="#">EN ▾</a>
+        <div class="topbar-social">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Instagram">ig</a>
+          <a href="#" aria-label="X">x</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Header / Navigation ===== -->
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="#home" class="logo">
+        <span class="logo-mark">◆</span>
+        <span class="logo-text">Aureus<em>Voyages</em></span>
+      </a>
+
+      <nav class="nav" id="nav">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#destinations" class="nav-link">Destinations</a>
+        <a href="#tours" class="nav-link">Tours</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#testimonials" class="nav-link">Reviews</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="#booking" class="btn btn-gold btn-sm">Book Now</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== Hero ===== -->
+  <section class="hero" id="home">
+    <div class="hero-slides">
+      <div class="hero-slide active" style="background-image:url('https://images.unsplash.com/photo-1506929562872-bb421503ef21?auto=format&fit=crop&w=1900&q=80')"></div>
+      <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1476514525588-fa4bea4b7e0b?auto=format&fit=crop&w=1900&q=80')"></div>
+      <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1503220317375-aa704169b024?auto=format&fit=crop&w=1900&q=80')"></div>
+      <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1900&q=80')"></div>
+    </div>
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-content">
+      <p class="hero-eyebrow reveal">— Curated Luxury Journeys Since 2008</p>
+      <h1 class="hero-title reveal">
+        Travel Beyond The<br /><span class="gold-italic">Ordinary</span>
+      </h1>
+      <p class="hero-sub reveal">Handcrafted itineraries, private guides, and the world's most extraordinary places — designed entirely around you.</p>
+
+      <div class="hero-stats reveal">
+        <div class="stat"><span class="stat-num" data-count="120">0</span><span class="stat-plus">+</span><p>Countries</p></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num" data-count="45">0</span><span class="stat-plus">k</span><p>Happy Travelers</p></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num" data-count="18">0</span><span class="stat-plus">yrs</span><p>Of Excellence</p></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num" data-count="98">0</span><span class="stat-plus">%</span><p>Satisfaction</p></div>
+      </div>
+
+      <div class="hero-cta reveal">
+        <a href="#tours" class="btn btn-gold">Explore Tours</a>
+        <a href="#booking" class="btn btn-ghost">Plan My Journey</a>
+      </div>
+    </div>
+
+    <div class="hero-scroll"><span></span>Scroll</div>
+    <div class="hero-progress"><span id="heroProgress"></span></div>
+  </section>
+
+  <!-- ===== Search Bar ===== -->
+  <section class="search" id="booking">
+    <div class="container">
+      <form class="search-card reveal" onsubmit="handleSearch(event)">
+        <div class="search-field">
+          <label>Destination</label>
+          <select required>
+            <option value="">Where to?</option>
+            <option>Santorini, Greece</option>
+            <option>Kyoto, Japan</option>
+            <option>Bali, Indonesia</option>
+            <option>Swiss Alps</option>
+            <option>Maldives</option>
+            <option>Marrakech, Morocco</option>
+            <option>Patagonia, Chile</option>
+            <option>Amalfi Coast, Italy</option>
+          </select>
+        </div>
+        <div class="search-field">
+          <label>Check In</label>
+          <input type="date" required />
+        </div>
+        <div class="search-field">
+          <label>Check Out</label>
+          <input type="date" required />
+        </div>
+        <div class="search-field">
+          <label>Travelers</label>
+          <select>
+            <option>1 Guest</option><option selected>2 Guests</option><option>3 Guests</option>
+            <option>4 Guests</option><option>5+ Guests</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-dark search-btn">Search</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== Featured Destinations ===== -->
+  <section class="section destinations" id="destinations">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="section-eyebrow">Featured Destinations</p>
+        <h2 class="section-title">The World's Most <span class="gold-italic">Coveted</span> Places</h2>
+        <p class="section-desc">From sun-drenched Aegean cliffs to alpine silence — explore our travelers' favorite escapes.</p>
+      </div>
+
+      <div class="dest-grid">
+        <a href="#tours" class="dest-card large reveal">
+          <img src="https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=1200&q=80" alt="Santorini" />
+          <div class="dest-shade"></div>
+          <div class="dest-info"><span class="dest-count">24 Tours</span><h3>Santorini</h3><p>Greece · from $2,190</p></div>
+        </a>
+        <a href="#tours" class="dest-card reveal">
+          <img src="https://images.unsplash.com/photo-1493976045277-18572c6351ce?auto=format&fit=crop&w=900&q=80" alt="Kyoto" />
+          <div class="dest-shade"></div>
+          <div class="dest-info"><span class="dest-count">18 Tours</span><h3>Kyoto</h3><p>Japan · from $3,450</p></div>
+        </a>
+        <a href="#tours" class="dest-card reveal">
+          <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=900&q=80" alt="Bali" />
+          <div class="dest-shade"></div>
+          <div class="dest-info"><span class="dest-count">21 Tours</span><h3>Bali</h3><p>Indonesia · from $1,690</p></div>
+        </a>
+        <a href="#tours" class="dest-card reveal">
+          <img src="https://images.unsplash.com/photo-1531572756c87-7a1d1de79304?auto=format&fit=crop&w=900&q=80" alt="Swiss Alps" />
+          <div class="dest-shade"></div>
+          <div class="dest-info"><span class="dest-count">15 Tours</span><h3>Swiss Alps</h3><p>Switzerland · from $2,980</p></div>
+        </a>
+        <a href="#tours" class="dest-card reveal">
+          <img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=900&q=80" alt="Maldives" />
+          <div class="dest-shade"></div>
+          <div class="dest-info"><span class="dest-count">12 Tours</span><h3>Maldives</h3><p>Indian Ocean · from $4,200</p></div>
+        </a>
+        <a href="#tours" class="dest-card reveal">
+          <img src="https://images.unsplash.com/photo-1597212618440-10df7b351cf3?auto=format&fit=crop&w=900&q=80" alt="Marrakech" />
+          <div class="dest-shade"></div>
+          <div class="dest-info"><span class="dest-count">16 Tours</span><h3>Marrakech</h3><p>Morocco · from $1,850</p></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Popular Tours ===== -->
+  <section class="section tours" id="tours">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="section-eyebrow">Signature Experiences</p>
+        <h2 class="section-title">Curated <span class="gold-italic">Tours</span> & Packages</h2>
+        <div class="tour-tabs" id="tourTabs">
+          <button class="tab-btn active" data-filter="all">All</button>
+          <button class="tab-btn" data-filter="beach">Beach & Islands</button>
+          <button class="tab-btn" data-filter="adventure">Adventure</button>
+          <button class="tab-btn" data-filter="culture">Culture</button>
+          <button class="tab-btn" data-filter="safari">Safari & Wildlife</button>
+        </div>
+      </div>
+
+      <div class="tour-grid" id="tourGrid">
+        <article class="tour-card reveal" data-cat="beach">
+          <div class="tour-media">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=80" alt="Maldives Escape" />
+            <span class="tour-badge">Best Seller</span>
+            <span class="tour-price">$4,200</span>
+          </div>
+          <div class="tour-body">
+            <div class="tour-meta"><span>★ 4.9</span><span>·</span><span>7 Days</span><span>·</span><span>Private Villa</span></div>
+            <h3 class="tour-title">Maldives Overwater Escape</h3>
+            <p class="tour-desc">Sunset dolphin cruises, private reef dives, and butler service in an exclusive atoll resort.</p>
+            <div class="tour-foot"><span>👥 2 Guests</span><a href="#contact" class="tour-link">Details →</a></div>
+          </div>
+        </article>
+
+        <article class="tour-card reveal" data-cat="culture">
+          <div class="tour-media">
+            <img src="https://images.unsplash.com/photo-1526481285630-6e9d676bb6e8?auto=format&fit=crop&w=1000&q=80" alt="Japan Heritage" />
+            <span class="tour-badge gold">New</span>
+            <span class="tour-price">$3,450</span>
+          </div>
+          <div class="tour-body">
+            <div class="tour-meta"><span>★ 5.0</span><span>·</span><span>10 Days</span><span>·</span><span>Guided</span></div>
+            <h3 class="tour-title">Japan Heritage & Cherry Blossoms</h3>
+            <p class="tour-desc">Tokyo, Kyoto & Nara with tea masters, private temple visits, and ryokan stays.</p>
+            <div class="tour-foot"><span>👥 Up to 8</span><a href="#contact" class="tour-link">Details →</a></div>
+          </div>
+        </article>
+
+        <article class="tour-card reveal" data-cat="adventure">
+          <div class="tour-media">
+            <img src="https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?auto=format&fit=crop&w=1000&q=80" alt="Alpine Expedition" />
+            <span class="tour-price">$2,980</span>
+          </div>
+          <div class="tour-body">
+            <div class="tour-meta"><span>★ 4.8</span><span>·</span><span>8 Days</span><span>·</span><span>Small Group</span></div>
+            <h3 class="tour-title">Swiss Alps Grand Expedition</h3>
+            <p class="tour-desc">Glacier trains, summit cableways, and chalet dining across Zermatt and St. Moritz.</p>
+            <div class="tour-foot"><span>👥 Up to 12</span><a href="#contact" class="tour-link">Details →</a></div>
+          </div>
+        </article>
+
+        <article class="tour-card reveal" data-cat="safari">
+          <div class="tour-media">
+            <img src="https://images.unsplash.com/photo-1516426122075-c668501adb0d?auto=format&fit=crop&w=1000&q=80" alt="Serengeti Safari" />
+            <span class="tour-badge">Best Seller</span>
+            <span class="tour-price">$5,600</span>
+          </div>
+          <div class="tour-body">
+            <div class="tour-meta"><span>★ 4.9</span><span>·</span><span>9 Days</span><span>·</span><span>Luxury Lodge</span></div>
+            <h3 class="tour-title">Serengeti Luxury Safari</h3>
+            <p class="tour-desc">Hot-air balloon safaris over the great migration and tented suites under African skies.</p>
+            <div class="tour-foot"><span>👥 2–6 Guests</span><a href="#contact" class="tour-link">Details →</a></div>
+          </div>
+        </article>
+
+        <article class="tour-card reveal" data-cat="culture beach">
+          <div class="tour-media">
+            <img src="https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1000&q=80" alt="Greek Isles" />
+            <span class="tour-price">$2,190</span>
+          </div>
+          <div class="tour-body">
+            <div class="tour-meta"><span>★ 4.9</span><span>·</span><span>6 Days</span><span>·</span><span>Yacht</span></div>
+            <h3 class="tour-title">Greek Isles Yacht Voyage</h3>
+            <p class="tour-desc">Sail Santorini, Mykonos & Milos aboard a private catamaran with onboard chef.</p>
+            <div class="tour-foot"><span>👥 Up to 10</span><a href="#contact" class="tour-link">Details →</a></div>
+          </div>
+        </article>
+
+        <article class="tour-card reveal" data-cat="adventure">
+          <div class="tour-media">
+            <img src="https://images.unsplash.com/photo-1518717758536-85ae29035b69?auto=format&fit=crop&w=1000&q=80" alt="Patagonia Trek" />
+            <span class="tour-badge gold">Exclusive</span>
+            <span class="tour-price">$4,850</span>
+          </div>
+          <div class="tour-body">
+            <div class="tour-meta"><span>★ 4.8</span><span>·</span><span>12 Days</span><span>·</span><span>Trekking</span></div>
+            <h3 class="tour-title">Patagonia Wilderness Trek</h3>
+            <p class="tour-desc">Torres del Paine circuit with gourmet base camps and expert mountaineer guides.</p>
+            <div class="tour-foot"><span>👥 Up to 8</span><a href="#contact" class="tour-link">Details →</a></div>
+          </div>
+        </article>
+      </div>
+
+      <div class="center reveal">
+        <a href="#contact" class="btn btn-dark">View All 200+ Tours</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Why Us / Services ===== -->
+  <section class="section services" id="services">
+    <div class="services-bg"></div>
+    <div class="container">
+      <div class="section-head light reveal">
+        <p class="section-eyebrow">Why Aureus Voyages</p>
+        <h2 class="section-title">Crafted To <span class="gold-italic">Perfection</span></h2>
+        <p class="section-desc">Every detail anticipated. Every moment elevated.</p>
+      </div>
+
+      <div class="service-grid">
+        <div class="service-card reveal">
+          <div class="service-icon">✈️</div>
+          <h3>Bespoke Itineraries</h3>
+          <p>No two journeys alike. Our designers build each trip around your pace, palate, and passions.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon">🏨</div>
+          <h3>Hand-Picked Stays</h3>
+          <p>Palaces, riads, overwater villas — every property personally vetted by our travel curators.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon">🗝️</div>
+          <h3>Private Access</h3>
+          <p>After-hours museums, closed-door tastings, and experiences money alone can't buy.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon">🛡️</div>
+          <h3>24/7 Concierge</h3>
+          <p>A dedicated journey specialist on call around the clock, wherever in the world you are.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon">🍽️</div>
+          <h3>Culinary Journeys</h3>
+          <p>Michelin tables, market feasts, and cooking classes with legendary local chefs.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon">💎</div>
+          <h3>Seamless Logistics</h3>
+          <p>Private transfers, fast-track visas, and lounge access — travel without friction.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== About / Split ===== -->
+  <section class="section about" id="about">
+    <div class="container about-grid">
+      <div class="about-media reveal">
+        <img src="https://images.unsplash.com/photo-1488646953014-81cb9e739624?auto=format&fit=crop&w=1000&q=80" alt="Travel experience" />
+        <div class="about-media-card">
+          <span class="big">18+</span>
+          <span>Years Crafting<br />Extraordinary Trips</span>
+        </div>
+        <div class="about-frame"></div>
+      </div>
+      <div class="about-text">
+        <p class="section-eyebrow reveal">Our Story</p>
+        <h2 class="section-title reveal">We Don't Sell Trips.<br />We Compose <span class="gold-italic">Memories.</span></h2>
+        <p class="reveal">Founded in 2008, Aureus Voyages began with a simple belief: travel should feel as rare as the places you visit. Today, a team of 60+ destination specialists designs journeys across 120 countries — each one a private commission, executed flawlessly.</p>
+        <ul class="about-list reveal">
+          <li><span>◆</span> ATOL & ABTA bonded, fully licensed agency</li>
+          <li><span>◆</span> Award-winning "Luxury Tour Operator" 2021–2025</li>
+          <li><span>◆</span> Carbon-offset journeys with local community partners</li>
+          <li><span>◆</span> Best-price guarantee with flexible cancellation</li>
+        </ul>
+        <div class="about-cta reveal">
+          <a href="#contact" class="btn btn-gold">Speak With A Specialist</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Banner CTA ===== -->
+  <section class="banner">
+    <div class="banner-bg" style="background-image:url('https://images.unsplash.com/photo-1470240791366-f371f87a1253?auto=format&fit=crop&w=1900&q=80')"></div>
+    <div class="container banner-inner reveal">
+      <h2>Ready For Your Next <span class="gold-italic">Great Escape?</span></h2>
+      <p>Book before December 31st and receive a complimentary couples' spa session on any 7+ night journey.</p>
+      <a href="#contact" class="btn btn-gold">Claim Offer</a>
+    </div>
+  </section>
+
+  <!-- ===== Testimonials ===== -->
+  <section class="section testimonials" id="testimonials">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="section-eyebrow">Traveler Stories</p>
+        <h2 class="section-title">Loved By <span class="gold-italic">45,000+</span> Explorers</h2>
+      </div>
+
+      <div class="testi-slider reveal" id="testiSlider">
+        <div class="testi-track" id="testiTrack">
+          <blockquote class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <p>"From the private hot-air balloon over the Serengeti to champagne sundowners on Lake Naivasha — not a single detail was left to chance. Simply the finest travel company we've ever used."</p>
+            <footer><strong>Eleanor & James Whitmore</strong><span>Serengeti Luxury Safari</span></footer>
+          </blockquote>
+          <blockquote class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <p>"They arranged after-hours access to the Forbidden City for our family. My kids still talk about it two years later. Aureus doesn't plan trips — they choreograph magic."</p>
+            <footer><strong>Mei-Ling Chen</strong><span>China Imperial Circuit</span></footer>
+          </blockquote>
+          <blockquote class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <p>"Our honeymoon in the Maldives was flawless from first call to final transfer. The overwater villa surprise they staged at sunset? We cried. Ten out of ten, would remarry here."</p>
+            <footer><strong>Sofia & Daniel Reyes</strong><span>Maldives Overwater Escape</span></footer>
+          </blockquote>
+        </div>
+        <div class="testi-nav">
+          <button id="testiPrev" aria-label="Previous">←</button>
+          <div class="testi-dots" id="testiDots"></div>
+          <button id="testiNext" aria-label="Next">→</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Contact ===== -->
+  <section class="section contact" id="contact">
+    <div class="container contact-grid">
+      <div class="contact-info">
+        <p class="section-eyebrow reveal">Get In Touch</p>
+        <h2 class="section-title reveal">Begin Planning Your <span class="gold-italic">Journey</span></h2>
+        <p class="reveal">Tell us where you dream of waking up. A specialist will reply within 24 hours with a first sketch of your itinerary — no obligation.</p>
+        <div class="contact-items reveal">
+          <div class="contact-item"><span>📍</span><p>Flagship Salon<br /><em>28 Berkeley Street, Mayfair, London</em></p></div>
+          <div class="contact-item"><span>📞</span><p>+1 (800) 555-0199<br /><em>Mon–Sat, 8am–8pm GMT</em></p></div>
+          <div class="contact-item"><span>✉️</span><p>hello@aureusvoyages.com<br /><em>We reply within 24 hours</em></p></div>
+        </div>
+      </div>
+
+      <form class="contact-form reveal" onsubmit="handleContact(event)">
+        <h3>Request A Callback</h3>
+        <div class="form-row">
+          <div class="form-group"><input type="text" placeholder="Full Name" required /></div>
+          <div class="form-group"><input type="email" placeholder="Email Address" required /></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><input type="tel" placeholder="Phone Number" /></div>
+          <div class="form-group">
+            <select required>
+              <option value="">Dream Destination</option>
+              <option>Europe</option><option>Asia</option><option>Africa & Safari</option>
+              <option>Americas</option><option>Oceania</option><option>Middle East</option>
+              <option>Surprise Me</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group"><textarea rows="4" placeholder="Tell us about your ideal trip — dates, guests, occasions..."></textarea></div>
+        <button type="submit" class="btn btn-gold btn-block">Send Request ✦</button>
+        <p class="form-note">By submitting you agree to our privacy policy. No spam, ever.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== Newsletter ===== -->
+  <section class="newsletter">
+    <div class="container newsletter-inner reveal">
+      <div>
+        <h3>Join The Inner Circle</h3>
+        <p>Secret fares, new destinations, and member-only journeys — monthly, beautifully written.</p>
+      </div>
+      <form class="newsletter-form" onsubmit="handleNewsletter(event)">
+        <input type="email" placeholder="Your email address" required />
+        <button type="submit" class="btn btn-gold">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#home" class="logo"><span class="logo-mark">◆</span><span class="logo-text">Aureus<em>Voyages</em></span></a>
+        <p>Bespoke luxury travel across 120 countries. Member of ABTA & ATOL bonded for your complete protection.</p>
+        <div class="footer-social">
+          <a href="#">f</a><a href="#">ig</a><a href="#">x</a><a href="#">in</a><a href="#">yt</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="#destinations">Destinations</a>
+        <a href="#tours">Signature Tours</a>
+        <a href="#services">Private Journeys</a>
+        <a href="#">Honeymoons</a>
+        <a href="#">Family Travel</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="#about">About Us</a>
+        <a href="#">Careers</a>
+        <a href="#">Press</a>
+        <a href="#">Sustainability</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <a href="#">Booking Terms</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Travel Advice</a>
+        <a href="#">FAQs</a>
+        <a href="#">Visa Assistance</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>© 2026 Aureus Voyages Ltd. All rights reserved.</p>
+        <p class="footer-pay">VISA · MASTERCARD · AMEX · PAYPAL · APPLE PAY</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-top" id="backTop" aria-label="Back to top">↑</button>
+
+  <!-- Toast -->
+  <div class="toast" id="toast"></div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
